@@ -31,4 +31,7 @@ My app is Spaceship. It's a two player game. A word is automatically generated. 
 
 #### Main View
 
-![Alt text](./wireframemain.png)
+![Alt text](wireframemain.png)
+![SPACESHIP initial screen](./assets/wireframemain.png)
+
+#### About Modal

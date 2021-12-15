@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+}
+img {
+	padding: 0;
+	display: inline-block;
+	just;
+	margin: 0px;
+}
+
+#container {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+    
+}
+
+#grid {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0%;
+	align-items: left;
+	width: 100%;
+    list-style: none;
+    
+}
+
+.box {
+	padding: 16%;
+	background-size: cover;
+	background-position: left;
+	/* Remove double borders: https://stackoverflow.com/questions/37231144/how-can-i-make-a-3x3-grid-box-that-contains-9-input-textboxes-without-double-bor/37231694 */
+	/* Add left and top border to all cells */
+	border: 0;
+	border-left: 1px solid gray;
+	border-top: 1px solid gray;
+}
+
+button {
+	margin-top: 1rem;
+}
+
+/* Add right border to elements at the end of rows */
+.box:nth-child(3n) {
+	border-right: 1px solid gray;
+}
+
+/* Add bottom border to elements at the bottom */
+.box:nth-child(n + 7) {
+	border-bottom: 1px solid gray;
+}
