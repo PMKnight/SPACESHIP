@@ -8,30 +8,28 @@ const lettersEl = document.querySelector('.letters');
 const wordEl = document.querySelector('.answer');
 const wrongEl = document.querySelector('#wrong');
 
-// input element
-const inputEl = document.querySelector('input');
-// image element
-const imgEl = document.getElementById('img');
-
-class Player {
-	constructor(name, guesses, score, wins) {
-		(this.name = name),
-			(this.guesses = guesses),
-			(this.score = score),
-			(this.wins = wins);
-	}
-}
-// // players
-// const astroOne = new Player('Astronaunt 1', 9, score, wins);
-// const astroTwo = new Player('Astronaunt 2', 9, score, wins);
 /*----- app's state (variables) -----*/
+let counter = 0;
 let rightLetters = [];
 
 let wrongLetters = [];
 
-let wordBank = ['PYTHON'];
+let wordBank = [
+	'COSMOS',
+	'GALAXY',
+	'ORBIT',
+	'ASTEROID',
+	'MOON',
+	'PLANET',
+	'UFO',
+	'STAR',
+	'NEBULA',
+	'COMET',
+];
 
-let correctWord = wordBank[0];
+// get random word from array
+let correctWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+
 /*----- cached element references -----*/
 
 /*----- functions -----*/
@@ -39,7 +37,6 @@ let correctWord = wordBank[0];
 function wordGuessed(event) {
 	// only clicks letters
 	if (event.target.value) {
-		console.log(event.target.value);
 		let letter = event.target.value;
 		if (correctWord.includes(letter)) {
 			rightWord(letter);
@@ -48,6 +45,7 @@ function wordGuessed(event) {
 		}
 	}
 }
+
 function rightWord(letter) {
 	let wordIndexes = [];
 	for (let i = 0; i < correctWord.length; i++) {
@@ -60,15 +58,41 @@ function rightWord(letter) {
 		let newIndex = wordIndexes[i];
 		rightLetters[newIndex] = letter;
 	}
-	console.log(rightLetters);
+
 	wordEl.innerText = rightLetters.join('');
+
 	// if correct
+	if (rightLetters.length === 1) {
+		prompt('Astronaut, Start Your Engines! Wanna Play?');
+	} else if (rightLetters.length === 2) {
+		alert('Let the Countdown Begin');
+	} else if (rightLetters.length === 3) {
+		alert('LIFTOFF!!! BE One With The Stars!');
+	}
 }
 
 function wrongWord(letter) {
 	wrongLetters.push(letter);
-	console.log(wrongLetters);
-	wrongEl.innerText = wrongLetters.join('');
+
+	wrongEl.textContent = wrongLetters.join('');
+
+	// image element
+
+	function uncover() {
+		let wrongletters = 0;
+
+		let imgEl = document.querySelector('.ship');
+		imgEl.setAttribute('src', `./assets/spaceship${counter}.png`);
+		counter++;
+
+		if (wrongLetters === 1) {
+			imgEl.remove(0);
+		}
+		if (wrongLetters.length === 9) {
+			alert('No more Guesses. You Lose');
+		}
+	}
+	uncover();
 }
 
 /*----- event listeners -----*/
