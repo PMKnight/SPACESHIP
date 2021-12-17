@@ -85,9 +85,6 @@ function wrongWord(letter) {
 		imgEl.setAttribute('src', `./assets/spaceship${counter}.png`);
 		counter++;
 
-		if (wrongLetters === 1) {
-			imgEl.remove(0);
-		}
 		if (wrongLetters.length === 9) {
 			alert('No more Guesses. You Lose');
 		}
