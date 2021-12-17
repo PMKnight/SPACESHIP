@@ -1,0 +1,130 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	border: transparent;
+	background-color: orange;
+	background-image: url(Assets/background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: saturation;
+}
+h1 {
+	display: flex;
+	justify-content: center;
+	font-family: sans-serif;
+	font-optical-sizing: auto;
+
+	color: whitesmoke;
+	background-color: transparent;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+h2 {
+	display: flex;
+	justify-content: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: grey;
+}
+/* .containers {
+	display: flex;
+	justify-content: space-evenly; */
+/* } */
+
+#ship0 {
+	position: static;
+	display: block;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+#ship1 {
+	visibility: hidden;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+#ship2 {
+	visibility: hidden;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+#ship3 {
+	visibility: hidden;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+#ship4 {
+	visibility: hidden;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+
+#ship5 {
+	visibility: hidden;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+
+#ship6 {
+	visibility: hidden;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+
+#ship7 {
+	visibility: hidden;
+	opacity: 0.6;
+	filter: sepia(100%);
+	padding: 50px;
+	align-content: center;
+	margin-left: 12%;
+}
+
+.letters {
+	justify-items: center;
+	margin-left: 200px;
+}
+button {
+	margin-top: 1rem;
+	border-color: orange;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		width: auto;
+		orientation: portrait;
+		--bg-color: black;
+		--bg-text: purple;
+	}
+	.letters {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: 2px;
+	}
+}

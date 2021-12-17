@@ -1,0 +1,32 @@
+Declare constants for playerOne, playerTwo
+
+READ current player
+  
+Determine winner
+
+Switch to the next player 
+
+Find and attach api for random words
+
+Find a way to input letters
+
+Remember letters guessed 
+
+Reveal correct guesses
+
+Hide Space ship and win/lose 
+
+Reveal Spaceship one section at a time
+
+Hide win/lose
+
+Word hints 
+
+Keep score
+
+Install timer
+
+-------Bonus-------
+Add timer-based scoring
+
+Track scores across games (even if the page is reloaded)
