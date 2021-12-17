@@ -82,7 +82,7 @@ function wrongWord(letter) {
 		let wrongletters = 0;
 
 		let imgEl = document.querySelector('.ship');
-		imgEl.setAttribute('src', `./assets/spaceship${counter}.png`);
+		imgEl.setAttribute('src', `./Assets/spaceship${counter}.png`);
 		counter++;
 
 		if (wrongLetters.length === 9) {
